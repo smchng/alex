@@ -38,7 +38,7 @@ export default function Home() {
         {showMore ? (
           <div className="absolute inset-0 flex justify-center items-end pl-[40rem] pb-[5vh]">
             <Link
-              href="https://youtu.be/Lb8BIRN6VwM"
+              href="/alex"
               className="hover:bg-yellow bg-red cursor-pointer border rounded-xl border-[1.5px] px-5 pb-1 transition-colors "
             >
               <p className="text-xs">

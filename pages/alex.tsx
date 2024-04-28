@@ -1,34 +1,37 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Kaia() {
+  const AudioPlayer = () => {
+    useEffect(() => {
+      const audio = new Audio("/vids/clap.mp3");
+      audio.play();
+    }, []);
+
+    return null;
+  };
   return (
     <div>
       <div className="absolute inset-0 flex justify-center items-center">
-        <video
-          className="md:h-screen md:w-auto h-auto w-screen"
-          autoPlay
-          //   controls
-          loop
-        >
-          <source src="/vids/kaia2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div className=" absolute flex justify-center items-end w-screen h-screen ">
         <Image
-          className=" w-[20vw] h-auto"
-          src="/imgs/cake.svg"
-          width={100}
-          height={100}
-          alt="hamster"
+          className="md:h-screen md:w-auto h-auto w-screen"
+          src="/imgs/p2.png"
+          width={1920}
+          height={1080}
+          alt="hbd"
         />
       </div>
-      {/* <div className="absolute flex h-auto w-screen justify-center items-center z-10">
-        <video className="" autoPlay muted loop>
-          <source src="/vids/flowers.mov" type="video/quicktime" />
-          Your browser does not support the video tag.
-        </video>
-      </div> */}
+      <div className="absolute inset-0 flex justify-center items-end pl-[40rem] pb-[5vh]">
+        <Link
+          href="/alex"
+          className="hover:bg-yellow bg-red cursor-pointer border rounded-xl border-[1.5px] px-5 pb-1 transition-colors "
+        >
+          <p className="text-xs">
+            <strong>next</strong>
+          </p>
+        </Link>{" "}
+      </div>
     </div>
   );
 }
