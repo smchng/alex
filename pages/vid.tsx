@@ -6,23 +6,15 @@ export default function Alex() {
   return (
     <div>
       <div className="absolute inset-0 flex justify-center items-center">
-        <Image
+        <video
           className="md:h-screen md:w-auto h-auto w-screen"
-          src="/imgs/p2.png"
-          width={1920}
-          height={1080}
-          alt="hbd"
-        />
-      </div>
-      <div className="absolute inset-0 flex justify-center items-end pl-[40rem] pb-[5vh]">
-        <Link
-          href="/alex"
-          className="hover:bg-yellow bg-red cursor-pointer border rounded-xl border-[1.5px] px-5 pb-1 transition-colors "
+          autoPlay
+          //   controls
+          loop
         >
-          <p className="text-xs">
-            <strong>next</strong>
-          </p>
-        </Link>{" "}
+          <source src="/vids/vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );
